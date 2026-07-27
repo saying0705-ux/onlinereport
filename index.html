@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NE능률 온라인 채널 운영 전략 — 이정진 대표님</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  /* Ink navy palette — 컨설팅 덱 톤, AI 기본값(크림/테라코타) 회피 */
+  --navy:#0E1B33;
+  --navy2:#152744;
+  --navy3:#1E3358;
+  --ink:#131720;
+  --ink2:#33404F;
+  --ink3:#5C6B7D;
+  --ink4:#8996A6;
+  --line:#DDE3EC;
+  --line2:#EAEEF4;
+  --bg:#F2F4F8;
+  --paper:#FFFFFF;
+  --g:#1E7A3C;      /* NE green */
+  --g10:#E5F3EA;
+  --g20:#C6E3D0;
+  --g80:#155C2C;
+  --red:#B23124;
+  --red10:#FBEBE9;
+  --amb:#B0730A;
+  --amb10:#FBF1DE;
+  --blu:#20518F;
+  --blu10:#E9F0FA;
+  --gold:#C79A3A;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink);font-size:13.5px;line-height:1.72;-webkit-font-smoothing:antialiased;}
+.doc{max-width:920px;margin:0 auto;padding-bottom:90px;background:var(--bg);}
+
+/* ═══════ COVER ═══════ */
+.cover{position:relative;background:var(--navy);color:#fff;overflow:hidden;padding:0;}
+.cover-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;}
+.cover-glow{position:absolute;top:-120px;right:-100px;width:460px;height:460px;background:radial-gradient(circle,rgba(30,122,60,.28) 0%,transparent 68%);pointer-events:none;}
+.cover-inner{position:relative;z-index:2;padding:44px 52px 40px;}
+/* top meta row */
+.cov-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1);}
+.cov-brand{display:flex;align-items:center;gap:11px;}
+.cov-brand .bmark{width:30px;height:30px;border-radius:7px;background:var(--g);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;color:#fff;letter-spacing:-.03em;}
+.cov-brand .btext{font-size:13px;font-weight:700;letter-spacing:.01em;}
+.cov-brand .btext span{display:block;font-size:10px;font-weight:400;color:rgba(255,255,255,.5);letter-spacing:.02em;margin-top:1px;}
+.cov-doctype{font-size:10px;font-family:'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--g);background:rgba(30,122,60,.14);border:1px solid rgba(30,122,60,.3);padding:5px 12px;border-radius:20px;}
+/* title block */
+.cov-body{padding:46px 0 44px;}
+.cov-eyebrow{font-size:11px;font-family:'DM Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:20px;}
+.cov-title{font-size:clamp(38px,5.6vw,60px);font-weight:900;letter-spacing:-.04em;line-height:1.02;margin-bottom:22px;}
+.cov-title .l2{color:var(--g);}
+.cov-lead{font-size:15px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.62);max-width:540px;}
+.cov-lead strong{font-weight:600;color:rgba(255,255,255,.9);}
+/* bottom: agenda + meta */
+.cov-foot{display:grid;grid-template-columns:1.55fr 1fr;gap:36px;padding-top:30px;border-top:1px solid rgba(255,255,255,.1);}
+.cov-agenda-l{font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:14px;}
+.cov-agenda-item{display:flex;gap:13px;align-items:baseline;padding:7px 0;border-top:1px solid rgba(255,255,255,.07);}
+.cov-agenda-item:first-of-type{border-top:none;}
+.cov-agenda-item .num{font-family:'DM Mono',monospace;font-size:11px;color:var(--g);font-weight:500;flex-shrink:0;width:22px;}
+.cov-agenda-item .txt{font-size:12.5px;color:rgba(255,255,255,.78);line-height:1.45;}
+.cov-meta-l{font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:14px;}
+.cov-meta-row{font-size:12px;color:rgba(255,255,255,.55);line-height:1.5;padding:6px 0;display:flex;flex-direction:column;gap:1px;}
+.cov-meta-row .k{font-size:9.5px;color:rgba(255,255,255,.38);font-family:'DM Mono',monospace;letter-spacing:.05em;text-transform:uppercase;}
+.cov-meta-row .v{color:rgba(255,255,255,.82);font-weight:500;font-size:12.5px;}
+
+/* ═══════ EXECUTIVE SUMMARY BAR ═══════ */
+.tldr{background:var(--navy2);color:#fff;padding:22px 52px;border-top:2px solid var(--g);}
+.tldr-l{font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--g);margin-bottom:12px;}
+.tldr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
+.tldr-item{}
+.tldr-item .tn{font-size:9px;font-family:'DM Mono',monospace;color:rgba(255,255,255,.4);letter-spacing:.05em;margin-bottom:5px;}
+.tldr-item .tt{font-size:13px;font-weight:700;line-height:1.4;margin-bottom:4px;}
+.tldr-item .td{font-size:11px;color:rgba(255,255,255,.5);line-height:1.5;}
+
+/* ═══════ SECTION ═══════ */
+.sec{background:var(--paper);padding:44px 52px 46px;border-bottom:1px solid var(--line);}
+.sec.gray{background:var(--bg);}
+.sec-head{margin-bottom:26px;}
+.sec-kick{display:flex;align-items:center;gap:9px;margin-bottom:11px;}
+.sec-kick .qbadge{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;color:#fff;background:var(--navy);padding:3px 9px;border-radius:5px;letter-spacing:.03em;}
+.sec-kick .qbadge.g{background:var(--g);}
+.sec-kick .qbadge.a{background:var(--amb);}
+.sec-kick .qbadge.b{background:var(--blu);}
+.sec-kick .kline{height:1px;flex:1;background:var(--line);}
+.sec-kick .ktag{font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--ink4);}
+.sec-title{font-size:clamp(22px,3vw,29px);font-weight:900;letter-spacing:-.035em;line-height:1.15;color:var(--ink);}
+.sec-title em{font-style:normal;color:var(--g);}
+.sec-lead{font-size:13.5px;color:var(--ink3);font-weight:300;line-height:1.65;margin-top:9px;max-width:640px;}
+
+/* prose */
+.p{font-size:13.5px;color:var(--ink2);line-height:1.82;max-width:680px;}
+.p + .p{margin-top:11px;}
+.p strong{font-weight:700;color:var(--ink);}
+
+/* ═══════ CALLOUT ═══════ */
+.call{border-left:3px solid var(--g);background:var(--g10);padding:14px 18px;border-radius:0 8px 8px 0;margin:18px 0;}
+.call.a{border-color:var(--amb);background:var(--amb10);}
+.call.r{border-color:var(--red);background:var(--red10);}
+.call.b{border-color:var(--blu);background:var(--blu10);}
+.call-l{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--g80);margin-bottom:5px;}
+.call.a .call-l{color:var(--amb);}.call.r .call-l{color:var(--red);}.call.b .call-l{color:var(--blu);}
+.call p{font-size:13px;line-height:1.72;color:#17402A;}
+.call.a p{color:#4A3204;}.call.r p{color:#57160F;}.call.b p{color:#173257;}
+.call p strong{font-weight:700;}
+
+.divx{height:1px;background:var(--line);margin:26px 0;}
+.blocklabel{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink4);margin-bottom:13px;}
+
+/* ═══════ DATA TABLE ═══════ */
+.twrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:10px;}
+table.dt{width:100%;border-collapse:collapse;font-size:13px;}
+table.dt thead th{background:var(--navy);color:rgba(255,255,255,.82);font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:11px 14px;text-align:left;white-space:nowrap;}
+table.dt thead th.num{text-align:right;}
+table.dt thead th.ctr{text-align:center;}
+table.dt tbody td{padding:12px 14px;border-top:1px solid var(--line2);color:var(--ink2);line-height:1.55;vertical-align:top;}
+table.dt tbody tr:nth-child(even) td{background:var(--bg);}
+table.dt tbody td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap;}
+table.dt tbody td.ctr{text-align:center;}
+table.dt tbody td.name{font-weight:700;color:var(--ink);white-space:nowrap;}
+table.dt tbody tr.total td{background:var(--navy)!important;color:#fff;font-weight:700;border-top:2px solid var(--g);}
+table.dt tbody tr.total td.num{color:var(--g20);font-size:15px;}
+.tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 8px;border-radius:11px;letter-spacing:.02em;white-space:nowrap;}
+.tag-g{background:var(--g10);color:var(--g80);}
+.tag-r{background:var(--red10);color:var(--red);}
+.tag-a{background:var(--amb10);color:var(--amb);}
+.tag-b{background:var(--blu10);color:var(--blu);}
+.tag-n{background:var(--bg);color:var(--ink3);border:1px solid var(--line);}
+
+/* ═══════ TREND (ELT decline) ═══════ */
+.trend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0;}
+.trend-c{border:1px solid var(--line);border-radius:10px;padding:17px 18px;background:var(--paper);position:relative;}
+.trend-c .ty{font-size:10px;font-family:'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--ink4);margin-bottom:9px;}
+.trend-c .tv{font-size:30px;font-weight:900;letter-spacing:-.04em;line-height:1;margin-bottom:8px;}
+.trend-c .td{font-size:11.5px;color:var(--ink3);line-height:1.5;}
+.trend-c.peak .tv{color:var(--amb);}
+.trend-c.now .tv{color:var(--red);}
+.trend-c.fall .tv{color:var(--red);font-size:23px;}
+.trend-arrow{position:absolute;top:50%;right:-13px;transform:translateY(-50%);z-index:3;font-size:18px;color:var(--ink4);}
+
+/* ═══════ CONTROL TOWER (signature diagram) ═══════ */
+.tower{background:var(--navy);border-radius:14px;padding:32px 30px 28px;margin:20px 0;position:relative;overflow:hidden;}
+.tower-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;}
+.tower-head{position:relative;z-index:2;text-align:center;margin-bottom:26px;}
+.tower-head .th-l{font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--g);margin-bottom:8px;}
+.tower-head .th-t{font-size:18px;font-weight:900;color:#fff;letter-spacing:-.02em;}
+.tower-head .th-t em{font-style:normal;color:var(--g);}
+/* control node */
+.tower-core{position:relative;z-index:2;max-width:320px;margin:0 auto 8px;background:linear-gradient(180deg,var(--g) 0%,var(--g80) 100%);border-radius:11px;padding:16px 20px;text-align:center;box-shadow:0 8px 28px rgba(30,122,60,.35);}
+.tower-core .tc-l{font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:3px;}
+.tower-core .tc-t{font-size:16px;font-weight:900;color:#fff;letter-spacing:-.01em;line-height:1.25;}
+.tower-core .tc-d{font-size:11px;color:rgba(255,255,255,.78);margin-top:4px;line-height:1.4;}
+/* connectors */
+.tower-stem{position:relative;z-index:2;height:26px;display:flex;justify-content:center;}
+.tower-stem::before{content:'';width:2px;height:100%;background:rgba(30,122,60,.5);}
+/* two layers: online / offline */
+.tower-layer{position:relative;z-index:2;margin-top:0;}
+.tower-layer-l{text-align:center;font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin:14px 0 12px;position:relative;}
+.tower-layer-l span{background:var(--navy);padding:0 12px;position:relative;z-index:2;}
+.tower-layer-l::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1);}
+.tower-nodes{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;}
+.tower-nodes.two{grid-template-columns:repeat(2,1fr);max-width:66%;margin:0 auto;}
+.tnode{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 15px;}
+.tnode.online{border-top:2px solid var(--blu);}
+.tnode.offline{border-top:2px solid var(--gold);}
+.tnode .tn-role{font-size:8.5px;font-family:'DM Mono',monospace;letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px;}
+.tnode.online .tn-role{color:#7BA6E0;}
+.tnode.offline .tn-role{color:var(--gold);}
+.tnode .tn-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:5px;line-height:1.25;}
+.tnode .tn-job{font-size:11px;color:rgba(255,255,255,.58);line-height:1.5;}
+
+/* ═══════ MATRIX ═══════ */
+.legend{display:flex;gap:15px;flex-wrap:wrap;margin:12px 0 14px;}
+.lg{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ink3);}
+.lg .d{width:11px;height:11px;border-radius:3px;flex-shrink:0;}
+.lg .d.core{background:var(--g10);border:1.5px solid var(--g);}
+.lg .d.sub{background:var(--amb10);border:1.5px solid var(--amb);}
+.lg .d.cut{background:var(--red10);border:1.5px solid var(--red);}
+.lg .d.na{background:var(--bg);border:1.5px solid var(--line);}
+.mwrap{overflow-x:auto;margin:8px 0 4px;border:1px solid var(--line);border-radius:10px;}
+table.mx{width:100%;border-collapse:collapse;min-width:760px;}
+table.mx th{background:var(--navy);color:#fff;font-size:10.5px;font-weight:600;padding:11px 12px;text-align:center;border-right:1px solid rgba(255,255,255,.08);}
+table.mx th:first-child{text-align:left;width:150px;}
+table.mx th small{display:block;font-weight:400;font-size:9px;color:rgba(255,255,255,.5);margin-top:2px;}
+table.mx td{border-top:1px solid var(--line);border-right:1px solid var(--line);padding:0;vertical-align:top;}
+table.mx td:last-child{border-right:none;}
+.mx-prod{padding:13px 13px;background:var(--bg);}
+.mx-prod .mp-n{font-size:12.5px;font-weight:700;color:var(--ink);line-height:1.25;margin-bottom:3px;}
+.mx-prod .mp-t{font-size:9.5px;color:var(--ink4);line-height:1.35;}
+.mx-cell{padding:11px 12px;min-width:132px;}
+.mx-cell.core{background:#EAF6EE;}
+.mx-cell.sub{background:#FBF3E2;}
+.mx-cell.cut{background:#FBEDEB;}
+.mx-cell.na{background:#F8F9FB;}
+.mc-h{font-size:10px;font-weight:700;margin-bottom:4px;letter-spacing:.02em;}
+.mx-cell.core .mc-h{color:var(--g80);}
+.mx-cell.sub .mc-h{color:var(--amb);}
+.mx-cell.cut .mc-h{color:var(--red);}
+.mx-cell.na .mc-h{color:var(--ink4);}
+.mc-a{font-size:11.5px;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:3px;}
+.mx-cell.na .mc-a{color:var(--ink3);font-weight:500;}
+.mc-d{font-size:10.5px;color:var(--ink3);line-height:1.45;}
+
+/* ═══════ ACTION / SEQUENCE ═══════ */
+.seq{margin:16px 0;}
+.seq-item{display:grid;grid-template-columns:112px 1fr;gap:0;border-left:2px solid var(--line);position:relative;}
+.seq-item::before{content:'';position:absolute;left:-6px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--g);}
+.seq-item.now::before{background:var(--g);}
+.seq-item.wait::before{border-color:var(--amb);}
+.seq-when{padding:16px 18px 16px 22px;}
+.seq-when .sw-t{font-size:11px;font-weight:700;color:var(--g);font-family:'DM Mono',monospace;letter-spacing:.02em;}
+.seq-item.wait .sw-t{color:var(--amb);}
+.seq-when .sw-s{font-size:10.5px;color:var(--ink4);margin-top:2px;}
+.seq-body{padding:16px 4px 20px 8px;}
+.seq-body .sb-t{font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:5px;}
+.seq-body .sb-d{font-size:12.5px;color:var(--ink2);line-height:1.66;}
+.seq-body .sb-d strong{color:var(--ink);font-weight:700;}
+
+/* ═══════ VERDICT ═══════ */
+.verdict{background:var(--navy);color:#fff;border-radius:12px;padding:26px 28px;margin:22px 0 4px;position:relative;overflow:hidden;}
+.verdict-glow{position:absolute;bottom:-80px;left:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(30,122,60,.22),transparent 70%);pointer-events:none;}
+.verdict-l{position:relative;font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:11px;}
+.verdict-t{position:relative;font-size:16px;font-weight:800;line-height:1.45;margin-bottom:12px;letter-spacing:-.01em;}
+.verdict-t em{font-style:normal;color:var(--g);}
+.verdict-b{position:relative;font-size:12.5px;color:rgba(255,255,255,.66);line-height:1.75;}
+.verdict-b strong{color:rgba(255,255,255,.92);font-weight:600;}
+
+/* decision box */
+.decis{background:var(--blu10);border:1px solid #C5D6EE;border-radius:10px;padding:17px 20px;margin:18px 0;}
+.decis-l{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blu);margin-bottom:8px;font-family:'DM Mono',monospace;}
+.decis-t{font-size:13.5px;font-weight:700;color:#173257;margin-bottom:9px;line-height:1.4;}
+.decis-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.decis-opt{background:#fff;border:1px solid #C5D6EE;border-radius:8px;padding:12px 14px;}
+.decis-opt .do-n{font-size:9px;font-weight:700;color:var(--blu);letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px;font-family:'DM Mono',monospace;}
+.decis-opt .do-t{font-size:12.5px;font-weight:700;color:var(--ink);margin-bottom:3px;}
+.decis-opt .do-d{font-size:11.5px;color:var(--ink3);line-height:1.5;}
+
+/* footer */
+.foot{background:var(--navy);color:#fff;padding:26px 52px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid var(--g);}
+.foot .fl .fn{font-size:14px;font-weight:700;}
+.foot .fl .fd{font-size:11.5px;color:rgba(255,255,255,.5);margin-top:3px;}
+.foot .fr{text-align:right;font-size:11px;font-family:'DM Mono',monospace;color:rgba(255,255,255,.45);line-height:1.9;}
+.foot .fr strong{color:rgba(255,255,255,.72);font-weight:500;}
+
+@media(max-width:640px){
+  .cover-inner,.tldr,.sec,.foot{padding-left:26px;padding-right:26px;}
+  .cov-foot,.tldr-grid,.trend,.decis-opts{grid-template-columns:1fr;}
+  .tower-nodes,.tower-nodes.two{grid-template-columns:1fr;max-width:none;}
+}
+
+/* ─ ORG STRUCTURE (현재 vs 지향) ─ */
+.org{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0;}
+.org-block{border-radius:12px;padding:20px 22px;position:relative;}
+.org-block.current{background:var(--paper);border:1px solid var(--line);}
+.org-block.future{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+.org-fglow{position:absolute;top:-70px;right:-50px;width:240px;height:240px;background:radial-gradient(circle,rgba(30,122,60,.22),transparent 70%);pointer-events:none;}
+.org-tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-family:'DM Mono',monospace;padding:4px 11px;border-radius:20px;margin-bottom:14px;}
+.org-block.current .org-tag{background:var(--bg);color:var(--ink3);border:1px solid var(--line);}
+.org-block.future .org-tag{background:rgba(30,122,60,.16);color:var(--g);border:1px solid rgba(30,122,60,.35);}
+.org-h{font-size:16px;font-weight:900;letter-spacing:-.02em;margin-bottom:5px;}
+.org-block.current .org-h{color:var(--ink);}
+.org-block.future .org-h{color:#fff;}
+.org-block.future .org-h em{font-style:normal;color:var(--g);}
+.org-sub{font-size:12px;line-height:1.6;margin-bottom:16px;}
+.org-block.current .org-sub{color:var(--ink3);}
+.org-block.future .org-sub{color:rgba(255,255,255,.6);}
+/* org units row */
+.org-units{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:2;}
+.ounit{border-radius:9px;padding:14px 15px;}
+.org-block.current .ounit{background:var(--bg);border:1px solid var(--line);}
+.org-block.future .ounit{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);}
+.ounit.dist{}
+.ounit.direct{}
+.org-block.future .ounit.direct{border-top:2px solid var(--g);background:rgba(30,122,60,.1);}
+.org-block.future .ounit.dist{border-top:2px solid var(--gold);}
+.org-block.current .ounit.direct{border-top:2px solid var(--ink4);}
+.org-block.current .ounit.dist{border-top:2px solid var(--gold);}
+.ou-org{font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;}
+.org-block.current .ou-org{color:var(--ink4);}
+.org-block.future .ounit.direct .ou-org{color:var(--g);}
+.org-block.future .ounit.dist .ou-org{color:var(--gold);}
+.ou-name{font-size:13px;font-weight:700;margin-bottom:6px;line-height:1.3;}
+.org-block.current .ou-name{color:var(--ink);}
+.org-block.future .ou-name{color:#fff;}
+.ou-ch{font-size:11px;line-height:1.6;}
+.org-block.current .ou-ch{color:var(--ink3);}
+.org-block.future .ou-ch{color:rgba(255,255,255,.62);}
+.ou-ch strong{font-weight:700;}
+.org-block.current .ou-ch strong{color:var(--ink2);}
+.org-block.future .ou-ch strong{color:rgba(255,255,255,.9);}
+.org-problem{margin-top:14px;padding-top:13px;border-top:1px solid var(--line);font-size:12px;line-height:1.65;color:var(--red);}
+.org-problem strong{font-weight:700;}
+.org-win{position:relative;z-index:2;margin-top:14px;padding-top:13px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;line-height:1.65;color:rgba(255,255,255,.72);}
+.org-win strong{color:var(--g);font-weight:700;}
+.org-arrow{display:flex;align-items:center;justify-content:center;gap:8px;padding:2px 0;}
+.org-arrow .oa-line{height:1px;width:40px;background:var(--line);}
+.org-arrow .oa-txt{font-size:10px;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink4);}
+.org-arrow .oa-ic{font-size:16px;color:var(--g);}
+
+</style>
+</head>
+<body>
+<div class="doc">
+
+<!-- ══════════ COVER ══════════ -->
+<header class="cover">
+  <div class="cover-grid"></div>
+  <div class="cover-glow"></div>
+  <div class="cover-inner">
+
+    <div class="cov-top">
+      <div class="cov-brand">
+        <div class="bmark">NE</div>
+        <div class="btext">NE능률<span>채널마케팅본부 · 디지털마케팅팀</span></div>
+      </div>
+      <div class="cov-doctype">경영 보고 · 대표님 열람용</div>
+    </div>
+
+    <div class="cov-body">
+      <div class="cov-eyebrow">Online Channel Operating Strategy</div>
+      <h1 class="cov-title">NE능률 온라인 채널<br><span class="l2">통합 운영 전략</span></h1>
+      <p class="cov-lead">온라인 서점·스마트스토어·자사몰과 <strong>지사·총판 유통</strong>을 아우르는 채널 운영 현황을 진단하고, 유통을 지키면서 <strong>본사 직거래(자사몰) 축을 독립적으로 키우는</strong> 장기 방향을 제안합니다.</p>
+    </div>
+
+    <div class="cov-foot">
+      <div class="cov-agenda">
+        <div class="cov-agenda-l">보고 순서</div>
+        <div class="cov-agenda-item"><span class="num">01</span><span class="txt">채널별 프로모션 성과 — 1회·연간 매출 실적</span></div>
+        <div class="cov-agenda-item"><span class="num">02</span><span class="txt">시장 변화 진단 — ELT 하락 · 베스트셀러 유통 제약</span></div>
+        <div class="cov-agenda-item"><span class="num">03</span><span class="txt">중단 프로모션 재개 방안 · 제품×채널 매트릭스</span></div>
+        <div class="cov-agenda-item"><span class="num">04</span><span class="txt">채널 운영 구조 — 직거래 축 분리 육성 방향</span></div>
+      </div>
+      <div class="cov-meta">
+        <div class="cov-meta-l">문서 정보</div>
+        <div class="cov-meta-row"><span class="k">보고자</span><span class="v">김동범 팀장</span></div>
+        <div class="cov-meta-row"><span class="k">수신</span><span class="v">이정진 대표님</span></div>
+        <div class="cov-meta-row"><span class="k">일자</span><span class="v">2026. 07</span></div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ══════════ EXECUTIVE SUMMARY ══════════ -->
+<div class="tldr">
+  <div class="tldr-l">Executive Summary — 한눈에 보는 핵심 4</div>
+  <div class="tldr-grid">
+    <div class="tldr-item">
+      <div class="tn">01 · 성과</div>
+      <div class="tt">고정 채널 연 2.68억</div>
+      <div class="td">도치맘·사월이네·미쉘TV·플랫폼 4개 채널 합산</div>
+    </div>
+    <div class="tldr-item">
+      <div class="tn">02 · 위협</div>
+      <div class="tt">ELT 시장 구조적 하락</div>
+      <div class="td">7억 → 3억, 홈스쿨링 수요 이탈로 매년 감소</div>
+    </div>
+    <div class="tldr-item">
+      <div class="tn">03 · 제약</div>
+      <div class="tt">베스트셀러 공동구매 불가</div>
+      <div class="td">지사·총판 반발 — 자사·타사 모두 진행 불가</div>
+    </div>
+    <div class="tldr-item">
+      <div class="tn">04 · 방향</div>
+      <div class="tt">직거래 축 분리 육성</div>
+      <div class="td">유통은 방어, 자사몰·디지털은 독립 성장 축으로</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 01 · 성과 ══════════ -->
+<section class="sec">
+  <div class="sec-head">
+    <div class="sec-kick"><span class="qbadge g">01</span><span class="kline"></span><span class="ktag">Performance</span></div>
+    <h2 class="sec-title">채널별 <em>프로모션 성과</em></h2>
+    <p class="sec-lead">공동구매·직거래 채널의 1회 매출과 연간 누적. 고정 4개 채널이 안정적으로 연 2.68억을 기여하나, 전량이 B&amp;G·수입원서에 집중되어 있습니다.</p>
+  </div>
+
+  <div class="blocklabel">채널별 1회 진행 매출 &amp; 연간 누적</div>
+  <div class="twrap">
+    <table class="dt">
+      <thead>
+        <tr>
+          <th>채널</th>
+          <th>구분</th>
+          <th>취급 상품</th>
+          <th class="num">1회</th>
+          <th class="ctr">연간</th>
+          <th class="num">누적</th>
+          <th>운영 특성</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">도치맘</td>
+          <td><span class="tag tag-g">맘카페</span></td>
+          <td>B&amp;G — Link·Writing·파닉스·중학영문법 Link</td>
+          <td class="num">0.2억</td>
+          <td class="ctr">6회</td>
+          <td class="num">1.2억</td>
+          <td>총판 경유 · 타이틀 적음</td>
+        </tr>
+        <tr>
+          <td class="name">사월이네</td>
+          <td><span class="tag tag-g">맘카페</span></td>
+          <td>B&amp;G Link 시리즈 + 옥스포드 코스북</td>
+          <td class="num">0.15억</td>
+          <td class="ctr">6회</td>
+          <td class="num">0.9억</td>
+          <td>총판 경유</td>
+        </tr>
+        <tr>
+          <td class="name">미쉘TV</td>
+          <td><span class="tag tag-b">직거래</span></td>
+          <td>옥스포드 리더스 (수입원서)</td>
+          <td class="num">0.1억</td>
+          <td class="ctr">4회</td>
+          <td class="num">0.4억</td>
+          <td>직거래 · 자주 진행 불가</td>
+        </tr>
+        <tr>
+          <td class="name">플랫폼</td>
+          <td><span class="tag tag-b">직거래</span></td>
+          <td>채택교재 할인 — 클래스카드·원아워·레디·청취닷컴</td>
+          <td class="num">0.03억</td>
+          <td class="ctr">6회</td>
+          <td class="num">0.18억</td>
+          <td>직거래 · 학원법 검토 대상</td>
+        </tr>
+        <tr>
+          <td class="name">기타 채널</td>
+          <td><span class="tag tag-n">소규모</span></td>
+          <td>B&amp;G 위주 소규모 인플루언서·맘카페</td>
+          <td class="num">0.05억</td>
+          <td class="ctr">변동</td>
+          <td class="num">변동</td>
+          <td>대형과 중복 시 컴플레인</td>
+        </tr>
+        <tr class="total">
+          <td class="name" style="color:#fff">고정 채널 합산</td>
+          <td></td>
+          <td>도치맘 + 사월이네 + 미쉘TV + 플랫폼</td>
+          <td class="num"></td>
+          <td class="ctr">22회</td>
+          <td class="num">2.68억</td>
+          <td>자사몰 기본매출 별도</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="call r">
+    <div class="call-l">채널 중복 리스크</div>
+    <p>대형 카페(도치맘·사월이네)와 소규모 채널이 <strong>동일 타이틀·시기에 겹치면 대형 카페 컴플레인이 심합니다.</strong> 기타 채널은 대형과 타이틀·시기를 반드시 분리하고, 공동구매는 최소 1개월 전·반기별로 사전 계획해 충돌을 방지해야 합니다.</p>
+  </div>
+
+  <div class="divx"></div>
+
+  <div class="blocklabel">맘카페 공급 구조 — 총판 경유 vs 본사 직접</div>
+  <div class="twrap">
+    <table class="dt">
+      <thead>
+        <tr><th>항목</th><th>총판 경유 (현행)</th><th>본사 직접</th><th>판단</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="name">고객 할인</td><td>30%</td><td>30% (동일)</td><td>동일</td></tr>
+        <tr><td class="name">본사 공급/수취</td><td>정가의 45% 공급</td><td>70% 수취 − 수수료 10% − 운영비</td><td>실수취 <strong>양쪽 ≈ 45%</strong></td></tr>
+        <tr><td class="name">운영 부담</td><td>총판 부담</td><td>보관·택배·인력 <span class="tag tag-r">본사</span></td><td>직접 시 부담 증가</td></tr>
+        <tr><td class="name">고객 DB</td><td><span class="tag tag-r">총판 보유</span></td><td><span class="tag tag-g">본사 확보</span></td><td>직접의 유일 이점</td></tr>
+        <tr><td class="name">정가제 리스크</td><td>총판 부담</td><td><span class="tag tag-r">본사 부담</span></td><td>직접 시 리스크</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="call a">
+    <div class="call-l">공급 구조 결론</div>
+    <p>본사 실수취는 <strong>양쪽 모두 약 45%로 유사</strong>합니다. 본사 직접은 고객 DB 확보 이점이 있으나 정가제 리스크·운영비를 본사가 부담합니다. <strong>현행 총판 경유가 리스크 대비 효율 면에서 적정</strong>하며, DB 전략이 핵심이 되는 시점에 직접 전환을 재검토합니다.</p>
+  </div>
+</section>
+
+<!-- ══════════ 02 · 시장 진단 ══════════ -->
+<section class="sec gray">
+  <div class="sec-head">
+    <div class="sec-kick"><span class="qbadge a">02</span><span class="kline"></span><span class="ktag">Market Diagnosis</span></div>
+    <h2 class="sec-title">시장 변화 <em>진단</em> — 두 개의 구조적 제약</h2>
+    <p class="sec-lead">현재 매출을 지탱하는 두 축이 모두 하방 압력에 있습니다. 수요가 빠지는 ELT와, 유통이 막힌 베스트셀러. 이것이 전략 전환의 근본 이유입니다.</p>
+  </div>
+
+  <div class="blocklabel">제약 ① — ELT·수입원서 홈스쿨링 시장의 구조적 하락</div>
+  <div class="trend">
+    <div class="trend-c peak">
+      <div class="ty">코로나 정점</div>
+      <div class="tv">7억</div>
+      <div class="td">홈스쿨링 수요 폭증기<br>ELT 교재 연 매출 최대</div>
+      <div class="trend-arrow">→</div>
+    </div>
+    <div class="trend-c now">
+      <div class="ty">2025년</div>
+      <div class="tv">3억</div>
+      <div class="td">엔데믹 전환 후 급감<br>정점 대비 절반 이하</div>
+      <div class="trend-arrow">→</div>
+    </div>
+    <div class="trend-c fall">
+      <div class="ty">이후 추세</div>
+      <div class="tv">지속 하락</div>
+      <div class="td">매년 감소<br>반등 신호 없음</div>
+    </div>
+  </div>
+  <div class="call a">
+    <div class="call-l">현장 진단 — 인플루언서·총판 공통 언급</div>
+    <p>모든 홈스쿨링 인플루언서가 동일하게 <strong>"이제 학원에 보낸다"</strong>고 말합니다. 신세대 학부모가 유입되며 <strong>수입원서를 집에서 직접 가르치려는 수요가 확실히 줄었고</strong>, 교재보다 교구·플랫폼 서비스를 선호합니다. <strong>울산키다리 정재영 실장도 동일하게 진단</strong>했습니다. 수입원서(OUP) 중심 전략의 축소는 불가피합니다.</p>
+  </div>
+
+  <div class="divx"></div>
+
+  <div class="blocklabel">제약 ② — 베스트셀러(초·중·고)는 공동구매 자체가 불가</div>
+  <div class="call r">
+    <div class="call-l">유통 구조 제약 — 원천 불가</div>
+    <p>능률VOCA·Grammar Zone 등 <strong>NE능률 지사유통 베스트셀러는 인플루언서·맘카페 공동구매(통상 30% 할인)가 원천적으로 불가능</strong>합니다. 상위 B&amp;G 프로모션만 진행해도 총판 조사에서 반발이 발생하며, 베스트셀러는 <strong>자사뿐 아니라 타사도 진행하지 못하는</strong> 업계 공통의 유통 질서입니다.</p>
+  </div>
+  <div class="twrap">
+    <table class="dt">
+      <thead><tr><th>구분</th><th>내용</th><th>결과</th></tr></thead>
+      <tbody>
+        <tr><td class="name">지사·총판 반발</td><td>베스트셀러 할인 공동구매 시 지역 유통망 전체가 반발</td><td><span class="tag tag-r">진행 불가</span></td></tr>
+        <tr><td class="name">유통 구조</td><td>지사·총판이 지역 학원·서점에 납품하는 오프라인 유통이 매출의 근간</td><td><span class="tag tag-a">보호 필요</span></td></tr>
+        <tr><td class="name">업계 현실</td><td>자사만이 아니라 경쟁사도 동일하게 베스트셀러 공동구매 불가</td><td><span class="tag tag-n">공통 제약</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="call">
+    <div class="call-l">전환의 방향</div>
+    <p>ELT는 수요가 빠지고, 베스트셀러는 유통이 막혀 있습니다. 결국 <strong>할인 공동구매만으로는 성장 여력이 없습니다.</strong> 베스트셀러는 할인이 아닌 <strong>자사몰 가치 마케팅(연구용 교재·부가자료·SEO)</strong>으로 접근하고, 새 성장은 <strong>NELT·디지털 서비스</strong>에서 찾아야 합니다.</p>
+  </div>
+</section>
+
+<!-- ══════════ 03 · 재개 + 매트릭스 ══════════ -->
+<section class="sec">
+  <div class="sec-head">
+    <div class="sec-kick"><span class="qbadge b">03</span><span class="kline"></span><span class="ktag">Reactivation &amp; Portfolio</span></div>
+    <h2 class="sec-title">중단 프로모션 <em>재개 방안</em> &amp; 제품×채널 매트릭스</h2>
+    <p class="sec-lead">2026년 8월부터 재개 가능한 채널과 방식을 정리했습니다. 다만 재개는 아래 매트릭스를 대표님이 확정하신 뒤 진행하는 것을 권장하며, 즉시 실행이 필요한 두 채널은 별도 표기했습니다.</p>
+  </div>
+
+  <div class="blocklabel">2026년 8월~ 재개 가능 채널 &amp; 실행 방식</div>
+  <div class="twrap">
+    <table class="dt">
+      <thead>
+        <tr><th>채널</th><th>재개 방식</th><th class="num">예상 추가</th><th>선결 조건</th><th class="ctr">우선순위</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">미쉘TV</td>
+          <td>옥스포드 리더스 직거래 공동구매 재개</td>
+          <td class="num">0.1억/회</td>
+          <td>없음 — 바로 가능</td>
+          <td class="ctr"><span class="tag tag-g">즉시</span></td>
+        </tr>
+        <tr>
+          <td class="name">사월이네</td>
+          <td>B&amp;G + 옥스포드 코스북 공동구매 재개</td>
+          <td class="num">0.15억/회</td>
+          <td>없음 — 바로 가능</td>
+          <td class="ctr"><span class="tag tag-g">즉시</span></td>
+        </tr>
+        <tr>
+          <td class="name">플랫폼</td>
+          <td>클래스카드·원아워·레디·청취닷컴 채택교재 할인</td>
+          <td class="num">0.03억/회</td>
+          <td>학원법 검토 완료</td>
+          <td class="ctr"><span class="tag tag-a">매트릭스 후</span></td>
+        </tr>
+        <tr>
+          <td class="name">기타 인플루언서</td>
+          <td>소규모 맘카페·인플루언서 (대형과 분리)</td>
+          <td class="num">0.05억/회</td>
+          <td>대형 채널과 일정 조율</td>
+          <td class="ctr"><span class="tag tag-a">매트릭스 후</span></td>
+        </tr>
+        <tr>
+          <td class="name">NELT B2C</td>
+          <td>도치맘·사월이네 응시권 공동구매 (신규)</td>
+          <td class="num">테스트</td>
+          <td>1~2회 반응 검증</td>
+          <td class="ctr"><span class="tag tag-b">신규 테스트</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="call b">
+    <div class="call-l">재개 실행 원칙</div>
+    <p><strong>미쉘TV·사월이네는 선결 조건이 없어 즉시 진행이 필요합니다.</strong> 나머지 채널(플랫폼·기타·NELT)은 아래 제품×채널 매트릭스를 <strong>대표님이 확정하신 후 순차 진행</strong>하는 것을 권장합니다. 매트릭스 없이 개별 재개하면 채널 간 중복·유통 마찰이 반복됩니다.</p>
+  </div>
+
+  <div class="divx"></div>
+
+  <div class="blocklabel">제품 × 채널 실행 매트릭스</div>
+  <div class="legend">
+    <div class="lg"><span class="d core"></span>핵심 — 집중 투자</div>
+    <div class="lg"><span class="d sub"></span>보조 — 조건부·제한</div>
+    <div class="lg"><span class="d cut"></span>불가·축소</div>
+    <div class="lg"><span class="d na"></span>해당 없음</div>
+  </div>
+  <div class="mwrap">
+    <table class="mx">
+      <thead>
+        <tr>
+          <th>제품</th>
+          <th>온라인 서점<small>발견·SEO</small></th>
+          <th>스마트스토어<small>검색 포착</small></th>
+          <th>자사몰<small>관계·Lock-in</small></th>
+          <th>공동구매 채널<small>맘카페·인플루언서 직거래</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mx-prod"><div class="mp-n">B&amp;G 초등·ELT</div><div class="mp-t">국내 교재 · 정가제 15%</div></td>
+          <td class="mx-cell sub"><div class="mc-h">▲ 보조</div><div class="mc-a">SEO·리뷰</div><div class="mc-d">자사몰 유입 CTA</div></td>
+          <td class="mx-cell na"><div class="mc-h">— 없음</div><div class="mc-a">CTA 연결만</div><div class="mc-d">정가제 동일</div></td>
+          <td class="mx-cell core"><div class="mc-h">★ 핵심</div><div class="mc-a">가치 마케팅</div><div class="mc-d">연구용·부가자료·번들</div></td>
+          <td class="mx-cell core"><div class="mc-h">★ 핵심</div><div class="mc-a">도치맘·사월이네</div><div class="mc-d">30% 할인 · 연 2.1억</div></td>
+        </tr>
+        <tr>
+          <td class="mx-prod"><div class="mp-n">베스트셀러 초·중·고</div><div class="mp-t">VOCA·GZ · 지사유통</div></td>
+          <td class="mx-cell core"><div class="mc-h">★ 핵심</div><div class="mc-a">베스트셀러 SEO</div><div class="mc-d">TOP 키워드 선점</div></td>
+          <td class="mx-cell na"><div class="mc-h">— 없음</div><div class="mc-a">CTA 연결만</div><div class="mc-d">정가제 동일</div></td>
+          <td class="mx-cell core"><div class="mc-h">★ 핵심</div><div class="mc-a">가치 마케팅 (유일)</div><div class="mc-d">할인 아닌 가치로만</div></td>
+          <td class="mx-cell cut"><div class="mc-h">✕ 불가</div><div class="mc-a">지사 반발</div><div class="mc-d">자사·타사 모두 불가</div></td>
+        </tr>
+        <tr>
+          <td class="mx-prod"><div class="mp-n">수입원서 (OUP)</div><div class="mp-t">홈스쿨링 하락 · B2C 미비</div></td>
+          <td class="mx-cell sub"><div class="mc-h">▲ 보조</div><div class="mc-a">현상 유지</div><div class="mc-d">추가 투자 없이</div></td>
+          <td class="mx-cell sub"><div class="mc-h">▲ 보조</div><div class="mc-a">소량 출점</div><div class="mc-d">규모 축소</div></td>
+          <td class="mx-cell cut"><div class="mc-h">✕ 축소</div><div class="mc-a">직접 비효율</div><div class="mc-d">40% 할인 20만 그침</div></td>
+          <td class="mx-cell sub"><div class="mc-h">▲ 제한</div><div class="mc-a">미쉘TV만 (연 4회)</div><div class="mc-d">옥스포드 리더스</div></td>
+        </tr>
+        <tr>
+          <td class="mx-prod"><div class="mp-n">NELT</div><div class="mp-t">신규 수익 축 · 정가제 외</div></td>
+          <td class="mx-cell na"><div class="mc-h">— 없음</div><div class="mc-a">미출점</div><div class="mc-d">효율 낮음</div></td>
+          <td class="mx-cell core"><div class="mc-h">★ 핵심</div><div class="mc-a">단품 출점</div><div class="mc-d">"레벨 테스트" 포착</div></td>
+          <td class="mx-cell core"><div class="mc-h">★ 핵심</div><div class="mc-a">교재+NELT 번들</div><div class="mc-d">자사몰 독점</div></td>
+          <td class="mx-cell core"><div class="mc-h">★ 신규</div><div class="mc-a">도치맘·사월이네</div><div class="mc-d">25,000원·30%↑ 테스트</div></td>
+        </tr>
+        <tr>
+          <td class="mx-prod"><div class="mp-n">커리큘럼·부가자료</div><div class="mp-t">자사몰 독점 자산</div></td>
+          <td class="mx-cell na"><div class="mc-h">— 없음</div><div class="mc-a">제공 불가</div><div class="mc-d">방문 이유 소멸</div></td>
+          <td class="mx-cell na"><div class="mc-h">— 없음</div><div class="mc-a">제공 불가</div><div class="mc-d">독점 유지</div></td>
+          <td class="mx-cell core"><div class="mc-h">★ 독점</div><div class="mc-a">자사몰 전용</div><div class="mc-d">로그인·방문 루틴</div></td>
+          <td class="mx-cell na"><div class="mc-h">— 없음</div><div class="mc-a">부적합</div><div class="mc-d">독점 자산</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="call">
+    <div class="call-l">매트릭스가 말하는 것</div>
+    <p>할인 채널(맘카페)은 <strong>B&amp;G와 NELT에만 유효</strong>합니다. 베스트셀러는 유통 제약으로 불가, 수입원서는 수요 하락으로 축소. 대신 <strong>자사몰은 전 제품의 '핵심' 열</strong>입니다 — 가치·번들·독점 콘텐츠가 모이는 지점이며, 이것이 직거래 축을 독립적으로 키워야 하는 이유입니다.</p>
+  </div>
+</section>
+
+<!-- ══════════ 04 · 조직 구조 & 직거래 전환 (시그니처) ══════════ -->
+<section class="sec gray">
+  <div class="sec-head">
+    <div class="sec-kick"><span class="qbadge">04</span><span class="kline"></span><span class="ktag">Structure &amp; Direction</span></div>
+    <h2 class="sec-title">채널 운영 <em>구조</em> — 직거래 축을 어떻게 키울 것인가</h2>
+    <p class="sec-lead">채널이 여러 조직에 걸쳐 있어 정책이 흩어집니다. 그런데 단순히 하나로 합치면 주 매출인 유통(지사·총판)에 무게가 쏠려 아무것도 바뀌지 않습니다. 대표님이 지향하시는 <strong>본사 직거래(자사몰 중심)</strong> 방향을 살리려면, 직거래 축을 유통 논리에서 분리해 독립적으로 키우는 구조가 필요합니다.</p>
+  </div>
+
+  <!-- 현재 구조의 딜레마 -->
+  <div class="p">현재 온라인 채널은 <strong>두 조직에 나뉘어</strong> 있습니다. 채널마케팅본부가 지사·총판·온라인 서점·네이버스토어를, 디지털마케팅팀이 자사몰·프로모션을 맡습니다. 문제는 <strong>매출의 대부분이 유통(지사·총판)에서 나온다는 점</strong>입니다. 유통과 직거래가 한 무게추 안에 있으면 의사결정은 늘 큰 쪽 — 유통 보호 — 으로 기울고, 직거래는 "유통을 흔들지 않는 선"에 갇혀 성장하지 못합니다.</div>
+
+  <!-- 시그니처: 현재 vs 지향 조직 구조 -->
+  <div class="org">
+    <!-- 현재 -->
+    <div class="org-block current">
+      <span class="org-tag">현재 구조 · As-Is</span>
+      <div class="org-h">유통과 직거래가 같은 무게추 안에</div>
+      <div class="org-sub">채널이 두 조직에 걸쳐 있고, 주 매출인 유통이 모든 판단의 기준점이 됩니다.</div>
+      <div class="org-units">
+        <div class="ounit dist">
+          <div class="ou-org">채널마케팅본부</div>
+          <div class="ou-name">유통 · 오픈마켓 중심</div>
+          <div class="ou-ch"><strong>지사·총판</strong>(지역 학원·서점 납품)<br>온라인 서점 · 네이버스토어</div>
+        </div>
+        <div class="ounit direct">
+          <div class="ou-org">디지털마케팅팀</div>
+          <div class="ou-name">직거래 · 프로모션</div>
+          <div class="ou-ch"><strong>자사몰</strong> · 공동구매 프로모션<br>고객 DB · 부가 콘텐츠</div>
+        </div>
+      </div>
+      <div class="org-problem">→ <strong>유통이 주 매출</strong>이라 모든 결정이 유통 보호로 쏠림. 직거래(자사몰)는 "유통을 안 건드리는 선"에 묶여 구조적으로 성장 정체.</div>
+    </div>
+
+    <!-- 화살표 -->
+    <div class="org-arrow">
+      <span class="oa-line"></span><span class="oa-ic">▼</span><span class="oa-txt">제안 · 협의 필요</span><span class="oa-ic">▼</span><span class="oa-line"></span>
+    </div>
+
+    <!-- 지향 -->
+    <div class="org-block future">
+      <div class="org-fglow"></div>
+      <span class="org-tag">지향 구조 · To-Be</span>
+      <div class="org-h">직거래 축을 <em>분리해 독립 육성</em></div>
+      <div class="org-sub">유통은 안정적으로 지키되, 직거래·디지털을 별도 성장 축으로 분리해 유통 논리에 눌리지 않게 합니다.</div>
+      <div class="org-units">
+        <div class="ounit dist">
+          <div class="ou-org">유통 축 · 방어</div>
+          <div class="ou-name">지사·총판·오픈마켓</div>
+          <div class="ou-ch">지역 유통 질서 유지. 베스트셀러 매출의 근간을 <strong>안정적으로 방어</strong>. 무리한 온라인 할인으로 흔들지 않음.</div>
+        </div>
+        <div class="ounit direct">
+          <div class="ou-org">직거래 축 · 성장</div>
+          <div class="ou-name">자사몰 · 디지털 서비스</div>
+          <div class="ou-ch"><strong>독립된 성장 목표·예산</strong>으로 운영. 가치 마케팅·NELT·번들·DB를 유통 눈치 없이 확장.</div>
+        </div>
+      </div>
+      <div class="org-win">→ 두 축이 <strong>서로 다른 KPI로 병행</strong>. 유통은 지키고 직거래는 키운다. 본사 직거래 비중이 점진적으로 올라가는 <strong>장기 전환의 토대</strong>.</div>
+    </div>
+  </div>
+
+  <div class="call b">
+    <div class="call-l">왜 "분리"가 핵심인가</div>
+    <p>단순 통합은 오히려 위험합니다 — 유통이 주 매출인 상태에서 하나로 합치면, 판단이 늘 유통 보호로 쏠려 <strong>직거래는 지금과 똑같이 정체</strong>됩니다. 직거래를 독립 축으로 두어야 <strong>유통을 지키면서도 자사몰을 별도 목표로 키울 수 있습니다.</strong> 이것이 본사 직거래 방향을 실제로 진전시키는 유일한 구조입니다.</p>
+  </div>
+
+  <div class="call">
+    <div class="call-l">역할 분담 원칙</div>
+    <p><strong>유통 축(지사·총판·오픈마켓)</strong>은 베스트셀러·주력 교재의 오프라인·서점 유통을 안정적으로 방어합니다. <strong>직거래 축(자사몰·디지털)</strong>은 정가제·유통에 얽매이지 않는 영역 — NELT·번들·부가 콘텐츠·고객 DB — 에서 성장합니다. 두 축이 <strong>겹치는 지점(가격·프로모션·시기)만 최소한으로 조율</strong>하면 충돌 없이 병행할 수 있습니다.</p>
+  </div>
+
+  <div class="verdict">
+    <div class="verdict-glow"></div>
+    <div class="verdict-l">최종 제언</div>
+    <div class="verdict-t">유통은 <em>안정적으로 지키고</em>, 직거래(자사몰·디지털)를 <em>독립 축으로 분리해 키우는 것</em>이 본사 직거래 전환의 유일한 구조입니다</div>
+    <div class="verdict-b">단순 통합은 유통 쏠림만 강화합니다. <strong>미쉘TV·사월이네는 즉시 재개</strong>하고, 나머지는 <strong>제품×채널 매트릭스 확정 뒤</strong> 순차 실행하되 — 근본 방향은 직거래 축의 독립입니다. 유통 축은 지사·총판·오픈마켓으로 <strong>주 매출을 방어</strong>하고, 직거래 축은 <strong>자사몰 가치 마케팅·NELT·번들·고객 DB</strong>를 유통 눈치 없이 확장합니다. 이렇게 두 축을 병행할 때 본사 직거래 비중이 점진적으로 올라갑니다.</div>
+  </div>
+
+  <div class="decis">
+    <div class="decis-l">대표님 결정 요청 사항</div>
+    <div class="decis-t">아래 두 가지에 대한 방향 확정을 요청드립니다.</div>
+    <div class="decis-opts">
+      <div class="decis-opt">
+        <div class="do-n">결정 01</div>
+        <div class="do-t">제품×채널 매트릭스 승인</div>
+        <div class="do-d">03의 매트릭스를 채널 운영 기준으로 확정. 이후 플랫폼·기타·NELT 재개를 이 기준에 따라 순차 진행.</div>
+      </div>
+      <div class="decis-opt">
+        <div class="do-n">결정 02</div>
+        <div class="do-t">직거래 축 분리 육성 (제안·협의)</div>
+        <div class="do-d">유통(지사·총판)과 직거래(자사몰·디지털)를 <strong>별도 성장 축·KPI로 분리</strong>할지 여부. 단순 통합 시 유통 쏠림으로 직거래 정체 → 본사 직거래 방향의 핵심 결정.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="foot">
+  <div class="fl">
+    <div class="fn">김동범 팀장</div>
+    <div class="fd">NE능률 채널마케팅본부 · 디지털마케팅팀</div>
+  </div>
+  <div class="fr">
+    <strong>보고일</strong> 2026. 07<br>
+    <strong>수신</strong> 이정진 대표님 · 내부 한정
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
